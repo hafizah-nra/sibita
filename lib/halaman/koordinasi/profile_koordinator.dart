@@ -16,7 +16,6 @@ class ProfilKoordinatorPage extends StatefulWidget {
 }
 
 class _ProfilKoordinatorPageState extends State<ProfilKoordinatorPage> {
-  // Color Palette
   final Color buttercream = Color(0xFFEDE2D0);
   final Color wheat = Color(0xFFE9D2A9);
   final Color apricotBrandy = Color(0xFFBB6A57);
@@ -30,7 +29,7 @@ class _ProfilKoordinatorPageState extends State<ProfilKoordinatorPage> {
 
   bool _isEditing = false;
   bool _isLoading = false;
-  bool _isLoadingProfile = true; // Loading saat fetch data dari API
+  bool _isLoadingProfile = true; 
   bool _obscurePassword = true;
   Uint8List? _newImageBytes;
   String? _savedFotoBase64;
@@ -123,7 +122,7 @@ class _ProfilKoordinatorPageState extends State<ProfilKoordinatorPage> {
         // Validasi tipe file
         if (!_isValidImageFile(pickedFile.name)) {
           _showMessage(
-            'Format file tidak didukung. Gunakan JPG, JPEG, PNG, atau WEBP',
+            'Format tidak didukung. Gunakan JPG, JPEG, PNG, atau WEBP',
             isError: true,
           );
           return;
